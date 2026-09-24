@@ -29,3 +29,13 @@ jobs:
       - name: Check Python syntax
         run: |
           python -m py_compile app.py
+          
+      - name: Run tests
+        run: |
+          pytest
+
+      - name: Build application
+        run: |
+              mkdir build
+              cp app.py build/
+              cp requirements.txt build/
